@@ -41,7 +41,7 @@ RUN sed -i "s/short_open_tag = Off/short_open_tag = On/" /etc/php/7.0/apache2/ph
 
 # Copy apache cong file with web site configuration to apache folder
 
-COPY apache-vhost.conf /etc/apache2/sites-available/mainwebsite.conf
+COPY conf/mainwebsite.conf /etc/apache2/sites-available/mainwebsite.conf
 RUN rm -f /etc/apache2/sites-enabled/000-default.conf
 
 # Enable Web site
